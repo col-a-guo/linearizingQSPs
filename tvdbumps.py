@@ -5,6 +5,8 @@ Created on Fri Apr 17 08:19:31 2020
 @author: r2d2go
 """
 
+#Compares error to likely source of error: Number of "bumps", i.e. times where player count becomes negative and must be adjusted
+
 import newRun as NR
 
 import time
@@ -14,6 +16,7 @@ import matplotlib.pyplot as plt
 
 
 def genRates(n):
+    #randomly generate movement rates
     winrates = []
     loserates = []
     counterrates = []
@@ -49,6 +52,7 @@ def genRates(n):
     initialDist[0] = 1-totalDist
     return([winrates,loserates,counterrates,initialDist])
 
+
 listOfRates = genRates(10)
 
 winrates = listOfRates[0]
@@ -56,7 +60,7 @@ loserates = listOfRates[1]
 counterrates = listOfRates[2]
 initialDist = listOfRates[3]
 
-
+#High player count games for purposes of comparison
 nState = NR.Rat(10, winrates, loserates, counterrates, 50, initialDist)
 aThingA = nState.average(initialDist, 40, 25200, .5)
 
@@ -68,7 +72,7 @@ for j in range(10):
 
 bumplist = []
 thingList = []
-
+#Generate further low-player games and track number of "bump" errors
 for bleh in range(1):
     for i in (range(1,2)):
         nState = NR.Rat(10, winrates, loserates, counterrates, 20, initialDist)
