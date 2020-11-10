@@ -7,7 +7,7 @@ Created on Fri Apr 17 08:19:31 2020
 
 #Compares error to likely source of error: Number of "bumps", i.e. times where player count becomes negative and must be adjusted
 
-import newRun as NR
+import ratRun as NR
 
 import time
 start = time.process_time()
