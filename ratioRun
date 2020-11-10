@@ -19,6 +19,8 @@ class Rat(object):
         
         The losing player has a chance to change (typically high% for related decks, counters to winning deck, and the winning deck)
         
+        As number of players approaches infinity, approaches equivalent to continuous "powers" of a 3-dimensional tensor (see https://www.overleaf.com/read/xhrfpsswwgpm for tensor conversions)
+        
         We'll have two matrices - one for the movement chance of the losing player, based on their own deck, and one based
         on the winner's. It is assumed these are unrelated.
             
