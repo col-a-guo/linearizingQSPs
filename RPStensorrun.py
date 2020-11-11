@@ -1,3 +1,5 @@
+#Equivalent to RPSrun but using generalized format
+
 import generalizedNDimRun as NR
 
 import time
