@@ -1,7 +1,7 @@
 #An example with the 3 states being rock paper and scissors; however Rock wins 25% of the time vs Paper.
 #Notable because the counterintuitive stable state (both calculated theoretical and demonstrated) has Scissors at highest prevalence.
 
-import newRun as NR
+import ratRun as NR
 
 import time
 start = time.process_time()
